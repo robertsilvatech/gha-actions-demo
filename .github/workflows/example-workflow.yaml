@@ -26,9 +26,11 @@ on:
         default: ""  
   
 jobs:
-  - name: teste
+  check_current_config:
     runs-on: ubuntu-latest
     steps:
-      - name: Teste
+      - name: Get data current
         run: |
-          echo "Oi"
+          echo "Teste"
+      - name: Checkout
+        uses: actions/checkout@v4
