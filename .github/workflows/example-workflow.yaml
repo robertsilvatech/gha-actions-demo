@@ -2,6 +2,7 @@ name: Deploy Operator
 run-name: ${{ format('[{0}][{1}|{2}] Deploy {3} on {4}', github.ref_name, inputs.location, inputs.cluster_pci == true && 'PCI' || 'NPCI', inputs.app_version, inputs.environment) }}
 on:
   workflow_dispatch:
+    inputs:
       location:
         type: choice
         description: Location
